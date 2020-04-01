@@ -843,7 +843,7 @@ ul.messages li .message {
 
 .box-header h2{
 	float:left;
-	margin-top: -13px;
+	margin-top: 0px;
 	font-weight: 300;
 	
 }
@@ -854,7 +854,7 @@ ul.messages li .message {
 
 
 .box-header h2 i {
-	margin: 10px 3px 0px 4px;
+	margin: 0px 3px 0px 4px;
 	opacity: .8;
 	filter: alpha(opacity=80);
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";

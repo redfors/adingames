@@ -42,11 +42,11 @@ jQuery(document).ready(function($){
 		}
 		
 	}
-	
+
 });	
 
 $(document).ready(function(){
-		
+
 			
 	$("#username").focus(function() {
 		
@@ -2059,7 +2059,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 						} );
 				}
 
-				// add / remove disabled classes from the assets elements
+				// add / remove disabled classes from the static elements
 				if ( oPaging.iPage === 0 ) {
 					$('li:first', an[i]).addClass('disabled');
 				} else {

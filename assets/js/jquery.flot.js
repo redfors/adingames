@@ -768,7 +768,7 @@
             
                 placeholder.css({ padding: 0 }); // padding messes up the positioning
                 
-                if (placeholder.css("position") == 'assets')
+                if (placeholder.css("position") == 'static')
                     placeholder.css("position", "relative"); // for positioning labels and overlay
 
                 getCanvasDimensions();
