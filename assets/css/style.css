@@ -3005,3 +3005,10 @@ ul.messagesList li span.date {
 .navbar .brand{
 	font-size: 35px;
 }
+.switch-btn-li{
+	color:#FFF;
+	margin: 20px 0 20px 10px !important;
+}
+.switch-btn-li + li{
+	border-top: 1px #514B6A solid;
+}

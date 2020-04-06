@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import TypesAds, Tasks
 
-# Register your models here.
+admin.site.register(TypesAds)
+admin.site.register(Tasks)

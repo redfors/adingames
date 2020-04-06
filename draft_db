@@ -1,0 +1,224 @@
+CREATE TABLE "profiles" (
+	"id" int8 NOT NULL,
+	"username" varchar NOT NULL,
+	"password" varchar NOT NULL,
+	"email" varchar NOT NULL,
+	"phone" int8 NOT NULL,
+	"name" varchar NOT NULL,
+	"last_name" varchar NOT NULL,
+	"middle_name" varchar NOT NULL,
+	"status" int8 NOT NULL,
+	"role" int8 NOT NULL,
+	"type_user" int8 NOT NULL,
+	"created" TIMESTAMP NOT NULL,
+	"updated" TIMESTAMP NOT NULL,
+	"deleted" TIMESTAMP NOT NULL,
+	"payment_card_id" int8 NOT NULL,
+	"business__card_id" int8 NOT NULL,
+	"my_task_id" int8 NOT NULL,
+	"collection_id" int8 NOT NULL,
+	"accounting_id" int8 NOT NULL,
+	"blog_id" int8 NOT NULL,
+	"deal_manage_id" int8 NOT NULL,
+	"company_id" int8 NOT NULL,
+	"playground_id" int8 NOT NULL,
+	CONSTRAINT "profiles_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "deal" (
+	"id" int8 NOT NULL,
+	"name" varchar NOT NULL,
+	"description" TEXT NOT NULL,
+	"data" TIMESTAMP NOT NULL,
+	"deal__profile__fk" int8 NOT NULL,
+	"deal__status_work__fk" int8 NOT NULL,
+	"deal__contractor__fk" int8 NOT NULL,
+	CONSTRAINT "deal_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "tasks" (
+	"id" int8 NOT NULL,
+	"title" varchar NOT NULL,
+	"overview" varchar NOT NULL,
+	"description" TEXT NOT NULL,
+	"tasks__profile__fk" int8 NOT NULL,
+	"tasks__playground__fk" int8 NOT NULL,
+	"tasks__types_ads__fk" varchar NOT NULL,
+	"tasks__format_ads__fk" int8 NOT NULL,
+	"task__stattuses__fk" int8 NOT NULL,
+	CONSTRAINT "tasks_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "status_work" (
+	"id" int8 NOT NULL,
+	"draft" int8 NOT NULL,
+	"requested" int8 NOT NULL,
+	"in_work" int8 NOT NULL,
+	"on_checking" int8 NOT NULL,
+	"completed" int8 NOT NULL,
+	"canceled" int8 NOT NULL,
+	CONSTRAINT "status_work_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "contractors" (
+	"id" int8 NOT NULL,
+	"name" varchar NOT NULL,
+	"description" TEXT NOT NULL,
+	"profile_id" int8 NOT NULL,
+	CONSTRAINT "contractors_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "collection_playgrounds" (
+	"id" int8 NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"collection_playgrounds__playgrounds__fk" int NOT NULL,
+	CONSTRAINT "collection_playgrounds_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "tools" (
+	"id" int8 NOT NULL,
+	"name" varchar(255) NOT NULL,
+	CONSTRAINT "tools_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "remote_accounts" (
+	"id" int8 NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"remote_accounts_profile" int8 NOT NULL,
+	CONSTRAINT "remote_accounts_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "statuses" (
+	"id" int8 NOT NULL,
+	"publish" int8 NOT NULL,
+	"draft" int8 NOT NULL,
+	"on_moderation" int8 NOT NULL,
+	CONSTRAINT "statuses_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "types_ads" (
+	"id" serial NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"descriptions" TEXT NOT NULL
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "payment_card" (
+
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "business_cards" (
+	"id" serial NOT NULL,
+	"name" varchar NOT NULL,
+	"overview" TEXT NOT NULL,
+	"url" varchar NOT NULL,
+	"business_cards__playgrounds__fk" int8 NOT NULL
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "playgrounds" (
+	"id" serial NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"description" TEXT NOT NULL,
+	"playgrounds__type_game__fk" int8 NOT NULL,
+	"playgrounds__profile__fk" int8 NOT NULL,
+	CONSTRAINT "playgrounds_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "format_ads" (
+	"id" serial NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"descriptions" TEXT NOT NULL
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "type_game" (
+	"id" serial NOT NULL,
+	"name" varchar(255) NOT NULL
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+
+ALTER TABLE "deal" ADD CONSTRAINT "deal_fk0" FOREIGN KEY ("deal__profile__fk") REFERENCES "profiles"("id");
+ALTER TABLE "deal" ADD CONSTRAINT "deal_fk1" FOREIGN KEY ("deal__status_work__fk") REFERENCES "status_work"("id");
+ALTER TABLE "deal" ADD CONSTRAINT "deal_fk2" FOREIGN KEY ("deal__contractor__fk") REFERENCES "contractors"("id");
+
+ALTER TABLE "tasks" ADD CONSTRAINT "tasks_fk0" FOREIGN KEY ("tasks__profile__fk") REFERENCES "profiles"("id");
+ALTER TABLE "tasks" ADD CONSTRAINT "tasks_fk1" FOREIGN KEY ("tasks__playground__fk") REFERENCES "playgrounds"("id");
+ALTER TABLE "tasks" ADD CONSTRAINT "tasks_fk2" FOREIGN KEY ("tasks__types_ads__fk") REFERENCES "types_ads"("id");
+ALTER TABLE "tasks" ADD CONSTRAINT "tasks_fk3" FOREIGN KEY ("tasks__format_ads__fk") REFERENCES "format_ads"("id");
+ALTER TABLE "tasks" ADD CONSTRAINT "tasks_fk4" FOREIGN KEY ("task__stattuses__fk") REFERENCES "statuses"("id");
+
+
+
+ALTER TABLE "collection_playgrounds" ADD CONSTRAINT "collection_playgrounds_fk0" FOREIGN KEY ("collection_playgrounds__playgrounds__fk") REFERENCES "playgrounds"("id");
+
+
+ALTER TABLE "remote_accounts" ADD CONSTRAINT "remote_accounts_fk0" FOREIGN KEY ("remote_accounts_profile") REFERENCES "profiles"("id");
+
+
+
+
+ALTER TABLE "business_cards" ADD CONSTRAINT "business_cards_fk0" FOREIGN KEY ("business_cards__playgrounds__fk") REFERENCES "playgrounds"("id");
+
+ALTER TABLE "playgrounds" ADD CONSTRAINT "playgrounds_fk0" FOREIGN KEY ("playgrounds__type_game__fk") REFERENCES "type_game"("id");
+ALTER TABLE "playgrounds" ADD CONSTRAINT "playgrounds_fk1" FOREIGN KEY ("playgrounds__profile__fk") REFERENCES "profiles"("id");
+
+
+

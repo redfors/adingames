@@ -19,7 +19,7 @@ from django.urls import include, re_path
 from django.conf import settings
 
 urlpatterns = [
-    re_path(r'admin/$', admin.site.urls),
+    re_path(r'admin/', admin.site.urls),
     re_path(r'^$', include('advertiser.urls')),
     re_path(r'index/$', include('advertiser.urls')),
     re_path(r'message/$', include('message.urls')),
