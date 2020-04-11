@@ -5,5 +5,5 @@ __pycache
 .env.prod
 .env.prod.db
 .idea/
-settings.py
+
 

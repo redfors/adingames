@@ -1,545 +1,692 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-
-    <!-- start: Meta -->
     <meta charset="utf-8">
-    <title>Рекламная биржа</title>
-    <meta name="description" content="Bootstrap Metro Dashboard">
-    <meta name="author" content="Сергей Иванов">
-    <meta name="keyword"
-          content="Рекламная биржа для игровых площадок">
-    <!-- end: Meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Bootstrap 4 Admin &amp; Dashboard Template">
+    <meta name="author" content="Bootlab">
 
-    <!-- start: Mobile Specific -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- end: Mobile Specific -->
+    <title>AppStack - Admin &amp; Dashboard Template</title>
 
-    <!-- start: CSS -->
-    <link id="bootstrap-style" href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/bootstrap-responsive.min.css' %}" rel="stylesheet">
-    <link id="base-style" href="{% static 'css/style.css' %}" rel="stylesheet">
-    <link id="base-style-responsive" href="{% static 'css/style-responsive.css' %}" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext'
-          rel='stylesheet' type='text/css'>
-    <link id="base-style" href="{% static 'css/switcher.css' %}" rel="stylesheet">
-    <!-- end: CSS -->
+    <link rel="preconnect" href="//fonts.gstatic.com/" crossorigin="">
 
+    <!-- PICK ONE OF THE STYLES BELOW -->
+    <link href="{% static 'css/classic.css' %}" rel="stylesheet">
+    <!-- <link href="css/corporate.css" rel="stylesheet"> -->
+    <!-- <link href="css/modern.css" rel="stylesheet"> -->
 
-    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<link id="ie-style" href="{% static 'css/ie.css' %}" rel="stylesheet">
-	<![endif]-->
-
-    <!--[if IE 9]>
-		<link id="ie9style" href="{% static 'css/ie9.css' %}" rel="stylesheet">
-	<![endif]-->
-
-    <!-- start: Favicon -->
-    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
-    <!-- end: Favicon -->
+    <!-- BEGIN SETTINGS -->
+    <!-- You can remove this after picking a style -->
     <style>
-        .container {
-            width: 75px;
-            height: 32px;
-            background: rgba(255, 255, 255, .4);
-            border: 2px solid #fff;
-            border-radius: 18px;
-            position: relative;
-        }
-
-        .item {
-            display: block;
-            height: 26px;
-            width: 26px;
-            border-radius: 15px;
-            background: #fff;
-            position: absolute;
-            top: 3px;
-            left: 3px;
-            transition: left .5s ease-out;
-        }
-
-        @keyframes move {
-            0% {
-                width: 26px;
-                height: 26px;
-                top: 3px;
-            }
-            30% {
-                width: 46px;
-                height: 16px;
-                top: 8px;
-            }
-            100% {
-                width: 26px;
-                height: 26px;
-                top: 3px;
-            }
-        }
-
-        @keyframes moveL {
-            0% {
-                width: 26px;
-                height: 26px;
-                top: 3px;
-            }
-            40% {
-                width: 46px;
-                height: 16px;
-                top: 8px;
-            }
-            100% {
-                width: 26px;
-                height: 26px;
-                top: 3px;
-            }
+        body {
+            opacity: 0;
         }
     </style>
 
+    <!-- END SETTINGS -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-120946860-6');
+    </script>
 </head>
 
 <body>
-<!-- start: Header -->
-<div class="navbar">
-    <div class="navbar-inner" style="background: #080808">
-        <div class="container-fluid">
-            <a class="btn btn-navbar" data-toggle="collapse"
-               data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+<div class="wrapper">
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-content ">
+            <a class="sidebar-brand" href="index.html">
+                <i class="align-middle" data-feather="box"></i>
+                <span class="align-middle">AppStack</span>
             </a>
-            <a class="brand" href="index"><span>ADINGAMES</span></a>
 
-            <!-- start: Header Menu -->
-            <div class="nav-no-collapse header-nav">
-                <ul class="nav pull-right">
-                    <li class="dropdown hidden-phone">
-                        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="icon-bell"></i>
-                            <span class="badge red">
-								7 </span>
-                        </a>
-                        <ul class="dropdown-menu notifications">
-                            <li class="dropdown-menu-title">
-                                <span>У тебя 11 сообщений</span>
-                                <a href="#refresh"><i class="icon-repeat"></i></a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon blue"><i class="icon-user"></i></span>
-                                    <span class="message">Регистрация нового пользователя</span>
-                                    <span class="time">1 min</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon green"><i class="icon-comment-alt"></i></span>
-                                    <span class="message">Новый комментарий</span>
-                                    <span class="time">7 min</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon green"><i class="icon-comment-alt"></i></span>
-                                    <span class="message">Новый комментарий</span>
-                                    <span class="time">8 min</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon green"><i class="icon-comment-alt"></i></span>
-                                    <span class="message">Новый комментарий</span>
-                                    <span class="time">16 min</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon blue"><i class="icon-user"></i></span>
-                                    <span class="message">Регистрация нового пользователя</span>
-                                    <span class="time">36 min</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon yellow"><i class="icon-shopping-cart"></i></span>
-                                    <span class="message">2 проданных рекламмы</span>
-                                    <span class="time">1 hour</span>
-                                </a>
-                            </li>
-                            <li class="warning">
-                                <a href="#">
-                                    <span class="icon red"><i class="icon-user"></i></span>
-                                    <span class="message">Пользователь удалил аккаует</span>
-                                    <span class="time">2 hour</span>
-                                </a>
-                            </li>
-                            <li class="warning">
-                                <a href="#">
-                                    <span class="icon red"><i class="icon-shopping-cart"></i></span>
-                                    <span class="message">Новый комментарий</span>
-                                    <span class="time">6 hour</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon green"><i class="icon-comment-alt"></i></span>
-                                    <span class="message">Новый комментарий</span>
-                                    <span class="time">yesterday</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon blue"><i class="icon-user"></i></span>
-                                    <span class="message">Регистрация нового пользователя</span>
-                                    <span class="time">yesterday</span>
-                                </a>
-                            </li>
-                            <li class="dropdown-menu-sub-footer">
-                                <a>Посмотреть все уведомления</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- start: Notifications Dropdown -->
-                    <li class="dropdown hidden-phone">
-                        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="icon-calendar"></i>
-                            <span class="badge red">
-								5 </span>
-                        </a>
-                        <ul class="dropdown-menu tasks">
-                            <li class="dropdown-menu-title">
-                                <span>У вас 17 заданий в процессе</span>
-                                <a href="#refresh"><i class="icon-repeat"></i></a>
-                            </li>
-                            <li>
-                                <a href="#">
-										<span class="header">
-											<span class="title">iOS Development</span>
-											<span class="percent"></span>
-										</span>
-                                    <div class="taskProgress progressSlim red">80</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-										<span class="header">
-											<span class="title">Android Development</span>
-											<span class="percent"></span>
-										</span>
-                                    <div class="taskProgress progressSlim green">47</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-										<span class="header">
-											<span class="title">ARM Development</span>
-											<span class="percent"></span>
-										</span>
-                                    <div class="taskProgress progressSlim yellow">32</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-										<span class="header">
-											<span class="title">ARM Development</span>
-											<span class="percent"></span>
-										</span>
-                                    <div class="taskProgress progressSlim greenLight">63</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-										<span class="header">
-											<span class="title">ARM Development</span>
-											<span class="percent"></span>
-										</span>
-                                    <div class="taskProgress progressSlim orange">80</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-menu-sub-footer">Посмотреть все задачи</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- end: Notifications Dropdown -->
-                    <!-- start: Message Dropdown -->
-                    <li class="dropdown hidden-phone">
-                        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="icon-envelope"></i>
-                            <span class="badge red">
-								4 </span>
-                        </a>
-                        <ul class="dropdown-menu messages">
-                            <li class="dropdown-menu-title">
-                                <span>У вас 9 сообщений</span>
-                                <a href="#refresh"><i class="icon-repeat"></i></a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="avatar"><img src="{% static 'img/avatar.jpg' %}" alt="Avatar"></span>
-                                    <span class="header">
-											<span class="from">
-										    	Сергей Иванов
-										     </span>
-											<span class="time">
-										    	6 min
-										    </span>
-										</span>
-                                    <span class="message">
-                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="avatar"><img src="{% static 'img/avatar.jpg' %}" alt="Avatar"></span>
-                                    <span class="header">
-											<span class="from">
-										    	Сергей Иванов
-										     </span>
-											<span class="time">
-										    	56 min
-										    </span>
-										</span>
-                                    <span class="message">
-                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="avatar"><img src="{% static 'img/avatar.jpg' %}" alt="Avatar"></span>
-                                    <span class="header">
-											<span class="from">
-										    	Сергей Иванов
-										     </span>
-											<span class="time">
-										    	3 hours
-										    </span>
-										</span>
-                                    <span class="message">
-                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="avatar"><img src="{% static 'img/avatar.jpg' %}" alt="Avatar"></span>
-                                    <span class="header">
-											<span class="from">
-										    	Сергей Иванов
-										     </span>
-											<span class="time">
-										    	yesterday
-										    </span>
-										</span>
-                                    <span class="message">
-                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="avatar"><img src="{% static 'img/avatar.jpg' %}" alt="Avatar"></span>
-                                    <span class="header">
-											<span class="from">
-										    	Сергей Иванов
-										     </span>
-											<span class="time">
-										    	Jul 25, 2012
-										    </span>
-										</span>
-                                    <span class="message">
-                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-menu-sub-footer">View all messages</a>
-                            </li>
-                        </ul>
-                    </li>
+            <ul class="sidebar-nav">
+                <li class="sidebar-header">
+                    Main
+                </li>
+                <li class="sidebar-item active">
+                    <a href="#dashboards" data-toggle="collapse" class="sidebar-link">
+                        <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+                    </a>
+                    <ul id="dashboards" class="sidebar-dropdown list-unstyled collapse show" data-parent="#sidebar">
+                        <li class="sidebar-item active"><a class="sidebar-link"
+                                                           href="dashboard-default.html">Default</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="dashboard-analytics-1.html">Analytics</a>
+                        </li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="dashboard-e-commerce.html">E-commerce</a>
+                        </li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="dashboard-social.html">Social</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="dashboard-crypto.html">Crypto <span
+                                class="sidebar-badge badge badge-primary">New</span></a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#pages" data-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="layout"></i> <span class="align-middle">Pages</span>
+                    </a>
+                    <ul id="pages" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link" href="pages-profile.html">Profile</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="pages-settings.html">Settings</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="pages-clients.html">Clients</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="pages-projects.html">Projects <span
+                                class="sidebar-badge badge badge-primary">New</span></a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="pages-invoice.html">Invoice</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="pages-pricing.html">Pricing</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="pages-tasks.html">Tasks <span
+                                class="sidebar-badge badge badge-primary">New</span></a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="pages-blank.html">Blank Page</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#auth" data-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="users"></i> <span class="align-middle">Auth</span>
+                        <span class="sidebar-badge badge badge-secondary">12/24</span>
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link" href="pages-sign-in.html">Sign In</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="pages-sign-up.html">Sign Up</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="pages-reset-password.html">Reset
+                            Password</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="pages-404.html">404 Page</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="pages-500.html">500 Page</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#layouts" data-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="monitor"></i> <span class="align-middle">Layouts</span>
+                    </a>
+                    <ul id="layouts" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link" href="layouts-sidebar-sticky.html">Sticky
+                            Sidebar</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="layouts-sidebar-collapsed.html">Collapsed
+                            Sidebar</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="layouts-boxed.html">Boxed Layout</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="dashboard-analytics.html?theme=classic">Classic
+                            Theme</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link"
+                                                    href="dashboard-analytics-2.html?theme=corporate">Corporate Theme
+                            <span class="sidebar-badge badge badge-primary">New</span></a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="dashboard-analytics-3.html?theme=modern">Modern
+                            Theme <span class="sidebar-badge badge badge-primary">New</span></a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#documentation" data-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="book-open"></i> <span
+                            class="align-middle">Documentation</span>
+                    </a>
+                    <ul id="documentation" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link" href="docs-introduction.html">Introduction</a>
+                        </li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="docs-installation.html">Getting
+                            Started</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="docs-plugins.html">Plugins</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="docs-changelog.html">Changelog</a></li>
+                    </ul>
+                </li>
 
-                    <!-- start: User Dropdown -->
-                    <li class="dropdown">
-                        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="halflings-icon white user"></i> Сергей Иванов
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-menu-title">
-                                <span>Настройки профиля</span>
-                            </li>
-                            <li><a href="#"><i class="halflings-icon user"></i> Профиль</a></li>
-                            <li><a href="login"><i class="halflings-icon off"></i> Выйти</a></li>
-                        </ul>
-                    </li>
-                    <!-- end: User Dropdown -->
-                </ul>
+                <li class="sidebar-header">
+                    Components
+                </li>
+                <li class="sidebar-item">
+                    <a href="#ui" data-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="grid"></i> <span class="align-middle">UI Elements</span>
+                    </a>
+                    <ul id="ui" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Alerts</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Buttons</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="ui-cards.html">Cards</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="ui-general.html">General</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="ui-grid.html">Grid</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="ui-modals.html">Modals</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="ui-notifications.html">Notifications</a>
+                        </li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="ui-tabs.html">Tabs</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="ui-typography.html">Typography</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#charts" data-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="pie-chart"></i> <span class="align-middle">Charts</span>
+                        <span class="sidebar-badge badge badge-primary">New</span>
+                    </a>
+                    <ul id="charts" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link" href="charts-chartjs.html">Chart.js</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="charts-apexcharts.html">ApexCharts <span
+                                class="sidebar-badge badge badge-primary">New</span></a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#forms" data-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Forms</span>
+                    </a>
+                    <ul id="forms" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link" href="forms-layouts.html">Layouts</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="forms-basic-elements.html">Basic
+                            Elements</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="forms-advanced-elements.html">Advanced
+                            Elements</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="forms-input-groups.html">Input Groups</a>
+                        </li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="forms-editors.html">Editors</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="forms-validation.html">Validation</a>
+                        </li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="forms-wizard.html">Wizard</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#tables" data-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="list"></i> <span class="align-middle">Tables</span>
+                    </a>
+                    <ul id="tables" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link" href="tables-bootstrap.html">Bootstrap</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="tables-datatables.html">DataTables</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#icons" data-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="heart"></i> <span class="align-middle">Icons</span>
+                        <span class="sidebar-badge badge badge-info">Special</span>
+                    </a>
+                    <ul id="icons" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link" href="icons-feather.html">Feather</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="icons-font-awesome.html">Font Awesome</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="calendar.html">
+                        <i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Calendar</span>
+                        <span class="sidebar-badge badge badge-primary">New</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#maps" data-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="map-pin"></i> <span class="align-middle">Maps</span>
+                    </a>
+                    <ul id="maps" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link" href="maps-google.html">Google Maps</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" href="maps-vector.html">Vector Maps</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#multi" data-toggle="collapse" class="sidebar-link">
+                        <i class="align-middle" data-feather="share-2"></i> <span
+                            class="align-middle">Multi Level</span>
+                    </a>
+                    <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#multi-2" data-toggle="collapse" class="sidebar-link collapsed">
+                                Two Levels
+                            </a>
+                            <ul id="multi-2" class="sidebar-dropdown list-unstyled collapse">
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link" href="#">Item 1</a>
+                                    <a class="sidebar-link" href="#">Item 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#multi-3" data-toggle="collapse" class="sidebar-link collapsed">
+                                Three Levels
+                            </a>
+                            <ul id="multi-3" class="sidebar-dropdown list-unstyled collapse">
+                                <li class="sidebar-item">
+                                    <a href="#multi-3-1" data-toggle="collapse" class="sidebar-link collapsed">
+                                        Item 1
+                                    </a>
+                                    <ul id="multi-3-1" class="sidebar-dropdown list-unstyled collapse">
+                                        <li class="sidebar-item">
+                                            <a class="sidebar-link" href="#">Item 1</a>
+                                            <a class="sidebar-link" href="#">Item 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link" href="#">Item 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="sidebar-bottom d-none d-lg-block">
+                <div class="media">
+                    <img class="rounded-circle mr-3" src="{% static 'img\avatars\avatar.jpg' %}" alt="Chris Wood"
+                         width="40" height="40">
+                    <div class="media-body">
+                        <h5 class="mb-1">Chris Wood</h5>
+                        <div>
+                            <i class="fas fa-circle text-success"></i> Online
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- end: Header Menu -->
 
         </div>
-    </div>
-</div>
-<!-- start: Header -->
+    </nav>
 
-<div class="container-fluid-full">
-    <div class="row-fluid">
+    <div class="main">
+        <nav class="navbar navbar-expand navbar-light bg-white">
+            <a class="sidebar-toggle d-flex mr-2">
+                <i class="hamburger align-self-center"></i>
+            </a>
 
-        <!-- start: Main Menu -->
-        <div id="sidebar-left" class="span2">
-            <div class="nav-collapse sidebar-nav">
-                <ul class="nav nav-tabs nav-stacked main-menu">
-                    <li class="switch-btn-li">
-                        <span>Рекламодатель</span>
-                        <div class="switch-btn"></div>
-                        <span>Площадка</span>
+            <form class="form-inline d-none d-sm-inline-block">
+                <input class="form-control form-control-no-border mr-sm-2" type="text" placeholder="Search projects..."
+                       aria-label="Search">
+            </form>
+
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-toggle="dropdown">
+                            <div class="position-relative">
+                                <i class="align-middle" data-feather="message-circle"></i>
+                                <span class="indicator">4</span>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0"
+                             aria-labelledby="messagesDropdown">
+                            <div class="dropdown-menu-header">
+                                <div class="position-relative">
+                                    4 New Messages
+                                </div>
+                            </div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-2">
+                                            <img src="{% static 'img\avatars\avatar-5.jpg' %}"
+                                                 class="avatar img-fluid rounded-circle" alt="Ashley Briggs">
+                                        </div>
+                                        <div class="col-10 pl-2">
+                                            <div class="text-dark">Ashley Briggs</div>
+                                            <div class="text-muted small mt-1">Nam pretium turpis et arcu. Duis arcu
+                                                tortor.
+                                            </div>
+                                            <div class="text-muted small mt-1">15m ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-2">
+                                            <img src="{% static 'img\avatars\avatar-2.jpg' %}"
+                                                 class="avatar img-fluid rounded-circle" alt="Carl Jenkins">
+                                        </div>
+                                        <div class="col-10 pl-2">
+                                            <div class="text-dark">Carl Jenkins</div>
+                                            <div class="text-muted small mt-1">Curabitur ligula sapien euismod vitae.
+                                            </div>
+                                            <div class="text-muted small mt-1">2h ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-2">
+                                            <img src="{% static 'img\avatars\avatar-4.jpg' %}"
+                                                 class="avatar img-fluid rounded-circle" alt="Stacie Hall">
+                                        </div>
+                                        <div class="col-10 pl-2">
+                                            <div class="text-dark">Stacie Hall</div>
+                                            <div class="text-muted small mt-1">Pellentesque auctor neque nec urna.</div>
+                                            <div class="text-muted small mt-1">4h ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-2">
+                                            <img src="{% static 'img\avatars\avatar-3.jpg' %}"
+                                                 class="avatar img-fluid rounded-circle" alt="Bertha Martin">
+                                        </div>
+                                        <div class="col-10 pl-2">
+                                            <div class="text-dark">Bertha Martin</div>
+                                            <div class="text-muted small mt-1">Aenean tellus metus, bibendum sed,
+                                                posuere ac, mattis non.
+                                            </div>
+                                            <div class="text-muted small mt-1">5h ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="dropdown-menu-footer">
+                                <a href="#" class="text-muted">Show all messages</a>
+                            </div>
+                        </div>
                     </li>
-
-                    <li><a href="index"><i class="icon-bar-chart"></i><span
-                            class="hidden-tablet"> Панель управления</span></a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-toggle="dropdown">
+                            <div class="position-relative">
+                                <i class="align-middle" data-feather="bell-off"></i>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0"
+                             aria-labelledby="alertsDropdown">
+                            <div class="dropdown-menu-header">
+                                4 New Notifications
+                            </div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-2">
+                                            <i class="text-danger" data-feather="alert-circle"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="text-dark">Update completed</div>
+                                            <div class="text-muted small mt-1">Restart server 12 to complete the
+                                                update.
+                                            </div>
+                                            <div class="text-muted small mt-1">2h ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-2">
+                                            <i class="text-warning" data-feather="bell"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="text-dark">Lorem ipsum</div>
+                                            <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate
+                                                hendrerit et.
+                                            </div>
+                                            <div class="text-muted small mt-1">6h ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-2">
+                                            <i class="text-primary" data-feather="home"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="text-dark">Login from 192.186.1.1</div>
+                                            <div class="text-muted small mt-1">8h ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-2">
+                                            <i class="text-success" data-feather="user-plus"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="text-dark">New connection</div>
+                                            <div class="text-muted small mt-1">Anna accepted your request.</div>
+                                            <div class="text-muted small mt-1">12h ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="dropdown-menu-footer">
+                                <a href="#" class="text-muted">Show all notifications</a>
+                            </div>
+                        </div>
                     </li>
-                    <li><a href="message"><i class="icon-envelope"></i><span
-                            class="hidden-tablet"> Сообщения</span></a></li>
-                    <li><a href="tasks"><i class="icon-tasks"></i><span class="hidden-tablet"> Задачи</span></a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-flag dropdown-toggle" href="#" id="languageDropdown" data-toggle="dropdown">
+                            <img src="{% static  'img\flags\us.png' %}" alt="English">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown">
+                            <a class="dropdown-item" href="#">
+                                <img src="{% static 'img\flags\us.png' %}" alt="English" width="20"
+                                     class="align-middle mr-1">
+                                <span class="align-middle">English</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="{% static 'img\flags\es.png' %}" alt="Spanish" width="20"
+                                     class="align-middle mr-1">
+                                <span class="align-middle">Spanish</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="{% static 'img\flags\de.png' %}" alt="German" width="20"
+                                     class="align-middle mr-1">
+                                <span class="align-middle">German</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="{% static 'img\flags\nl.png' %}" alt="Dutch" width="20"
+                                     class="align-middle mr-1">
+                                <span class="align-middle">Dutch</span>
+                            </a>
+                        </div>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-toggle="dropdown">
+                            <i class="align-middle" data-feather="settings"></i>
+                        </a>
 
-                    <li><a href="chart"><i class="icon-list-alt"></i><span class="hidden-tablet"> Статистика</span></a>
-                    </li>
-
-                    <li><a href="gallery"><i class="icon-picture"></i><span
-                            class="hidden-tablet"> Галерея</span></a></li>
-
-                    <li><a href="calendar"><i class="icon-calendar"></i><span
-                            class="hidden-tablet"> Календарь</span></a></li>
-
-                    <li><a href="file-manager"><i class="icon-folder-open"></i><span class="hidden-tablet"> Менеджер файлов</span></a>
-                    </li>
-
-                    <li><a href="login"><i class="icon-lock"></i><span
-                            class="hidden-tablet"> Страница авторизации</span></a>
+                        <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-toggle="dropdown">
+                            <img src="{% static 'img\avatars\avatar.jpg' %}"
+                                 class="avatar img-fluid rounded-circle mr-1" alt="Chris Wood"> <span class="text-dark">Chris Wood</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="pages-profile.html"><i class="align-middle mr-1"
+                                                                                  data-feather="user"></i> Profile</a>
+                            <a class="dropdown-item" href="#"><i class="align-middle mr-1" data-feather="pie-chart"></i>
+                                Analytics</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="pages-settings.html">Settings & Privacy</a>
+                            <a class="dropdown-item" href="#">Help</a>
+                            <a class="dropdown-item" href="#">Sign out</a>
+                        </div>
                     </li>
                 </ul>
             </div>
-        </div>
-        <!-- end: Main Menu -->
-
-        <noscript>
-            <div class="alert alert-block span10">
-                <h4 class="alert-heading">Внимание!</h4>
-                <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
-                    enabled to use this site.</p>
-            </div>
-        </noscript>
+        </nav>
 
         <!-- start: Content -->
         {% block content %}
         {% endblock %}
         <!-- end: Content -->
-    </div><!--/#content.span10-->
-</div><!--/fluid-row-->
-
-<div class="modal hide fade" id="myModal">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×</button>
-        <h3>Настройки</h3>
-    </div>
-    <div class="modal-body">
-        <p>Здесь можно настроить параметры ...</p>
-    </div>
-    <div class="modal-footer">
-        <a href="#" class="btn" data-dismiss="modal">Закрыть</a>
-        <a href="#" class="btn btn-primary">Сохранить изменения</a>
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row text-muted">
+                    <div class="col-6 text-left">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a class="text-muted" href="#">Support</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-muted" href="#">Help Center</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-muted" href="#">Privacy</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-muted" href="#">Terms of Service</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 text-right">
+                        <p class="mb-0">
+                            &copy; 2019 - <a href="index.html" class="text-muted">AppStack</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </div>
 
-<div class="common-modal modal fade" id="common-Modal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <ul class="list-inline item-details">
-            <li><a href="http://themifycloud.com">Шаблоны администратора</a></li>
-            <li><a href="http://themescloud.org">Темы начальной загрузки</a></li>
-        </ul>
-    </div>
-</div>
+<script src="{% static 'js\app.js' %}"></script>
 
-<div class="clearfix"></div>
+<script>
+    $(function () {
+        // Bar chart
+        new Chart(document.getElementById("chartjs-dashboard-bar"), {
+            type: "bar",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                datasets: [{
+                    label: "Last year",
+                    backgroundColor: window.theme.primary,
+                    borderColor: window.theme.primary,
+                    hoverBackgroundColor: window.theme.primary,
+                    hoverBorderColor: window.theme.primary,
+                    data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79]
+                }, {
+                    label: "This year",
+                    backgroundColor: "#E8EAED",
+                    borderColor: "#E8EAED",
+                    hoverBackgroundColor: "#E8EAED",
+                    hoverBorderColor: "#E8EAED",
+                    data: [69, 66, 24, 48, 52, 51, 44, 53, 62, 79, 51, 68]
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                },
+                scales: {
+                    yAxes: [{
+                        gridLines: {
+                            display: false
+                        },
+                        stacked: false,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    }],
+                    xAxes: [{
+                        barPercentage: .75,
+                        categoryPercentage: .5,
+                        stacked: false,
+                        gridLines: {
+                            color: "transparent"
+                        }
+                    }]
+                }
+            }
+        });
+    });
+</script>
+<script>
+    $(function () {
 
-<footer>
-
-    <p>
-        <span style="text-align:left;float:left">&copy; 2020 <a
-                href="#"
-                alt="Bootstrap_Metro_Dashboard">Адаптивная панель управления ADINGAMES</a></span>
-
-    </p>
-
-</footer>
-
-<!-- start: JavaScript-->
-
-<script src="{% static 'js/jquery-1.9.1.min.js' %}"></script>
-<script src="{% static 'js/jquery-migrate-1.0.0.min.js' %}"></script>
-
-<script src="{% static 'js/jquery-ui-1.10.0.custom.min.js' %}"></script>
-
-<script src="{% static 'js/jquery.ui.touch-punch.js' %}"></script>
-
-<script src="{% static 'js/modernizr.js' %}"></script>
-
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
-
-<script src="{% static 'js/jquery.cookie.js' %}"></script>
-
-<script src="{% static 'js/fullcalendar.min.js' %}"></script>
-
-<script src="{% static 'js/jquery.dataTables.min.js' %}"></script>
-
-<script src="{% static 'js/excanvas.js' %}"></script>
-<script src="{% static 'js/jquery.flot.js' %}"></script>
-<script src="{% static 'js/jquery.flot.pie.js' %}"></script>
-<script src="{% static 'js/jquery.flot.stack.js' %}"></script>
-<script src="{% static 'js/jquery.flot.resize.min.js' %}"></script>
-
-<script src="{% static 'js/jquery.chosen.min.js' %}"></script>
-
-<script src="{% static 'js/jquery.uniform.min.js' %}"></script>
-
-<script src="{% static 'js/jquery.cleditor.min.js' %}"></script>
-
-<script src="{% static 'js/jquery.noty.js' %}"></script>
-
-<script src="{% static 'js/jquery.elfinder.min.js' %}"></script>
-
-<script src="{% static 'js/jquery.raty.min.js' %}"></script>
-
-<script src="{% static 'js/jquery.iphone.toggle.js' %}"></script>
-
-<script src="{% static 'js/jquery.uploadify-3.1.min.js' %}"></script>
-
-<script src="{% static 'js/jquery.gritter.min.js' %}"></script>
-
-<script src="{% static 'js/jquery.imagesloaded.js' %}"></script>
-
-<script src="{% static 'js/jquery.masonry.min.js' %}"></script>
-
-<script src="{% static 'js/jquery.knob.modified.js' %}"></script>
-
-<script src="{% static 'js/jquery.sparkline.min.js' %}"></script>
-
-<script src="{% static 'js/counter.js' %}"></script>
-
-<script src="{% static 'js/retina.js' %}"></script>
-
-<script src="{% static 'js/custom.js' %}"></script>
-
-<script src="{% static 'js/switcher.js' %}"></script>
-<!-- end: JavaScript-->
+        $("#datetimepicker-dashboard").datetimepicker({
+            inline: true,
+            sideBySide: false,
+            format: "L"
+        });
+    });
+</script>
+<script>
+    $(function () {
+        // Line chart
+        new Chart(document.getElementById("chartjs-dashboard-line"), {
+            type: "line",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                datasets: [{
+                    label: "Sales ($)",
+                    fill: true,
+                    backgroundColor: "transparent",
+                    borderColor: window.theme.primary,
+                    data: [2015, 1465, 1487, 1796, 1387, 2123, 2866, 2548, 3902, 4938, 3917, 4927]
+                }, {
+                    label: "Orders",
+                    fill: true,
+                    backgroundColor: "transparent",
+                    borderColor: window.theme.tertiary,
+                    borderDash: [4, 4],
+                    data: [928, 734, 626, 893, 921, 1202, 1396, 1232, 1524, 2102, 1506, 1887]
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    intersect: false
+                },
+                hover: {
+                    intersect: true
+                },
+                plugins: {
+                    filler: {
+                        propagate: false
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                        reverse: true,
+                        gridLines: {
+                            color: "rgba(0,0,0,0.05)"
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            stepSize: 500
+                        },
+                        display: true,
+                        borderDash: [5, 5],
+                        gridLines: {
+                            color: "rgba(0,0,0,0)",
+                            fontColor: "#fff"
+                        }
+                    }]
+                }
+            }
+        });
+    });
+</script>
+<script>
+    $(function () {
+        // Pie chart
+        new Chart(document.getElementById("chartjs-dashboard-pie"), {
+            type: "pie",
+            data: {
+                labels: ["Direct", "Affiliate", "E-mail", "Other"],
+                datasets: [{
+                    data: [2602, 1253, 541, 1465],
+                    backgroundColor: [
+                        window.theme.primary,
+                        window.theme.warning,
+                        window.theme.danger,
+                        "#E8EAED"
+                    ],
+                    borderColor: "transparent"
+                }]
+            },
+            options: {
+                responsive: !window.MSInputMethodContext,
+                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                }
+            }
+        });
+    });
+</script>
+<script>
+    $(function () {
+        $("#datatables-dashboard-projects").DataTable({
+            pageLength: 6,
+            lengthChange: false,
+            bFilter: false,
+            autoWidth: false
+        });
+    });
+</script>
 
 </body>
+
 </html>

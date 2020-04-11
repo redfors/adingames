@@ -1,645 +1,356 @@
 {% extends 'main.html' %}
 <!-- start: Content -->
+{% load static %}
 {% block content %}
-    <div id="content" class="span10">
 
 
-        <ul class="breadcrumb">
-            <li>
-                <i class="icon-home"></i>
-                <a href="index">Home</a>
-                <i class="icon-angle-right"></i>
-            </li>
-            <li><a href="#">Панель управления</a></li>
-        </ul>
+    <main class="content">
+        <div class="container-fluid p-0">
 
-        <div class="row-fluid">
-
-            <div class="span3 statbox purple" onTablet="span6" onDesktop="span3">
-                <div class="boxchart">5,6,7,2,0,4,2,4,8,2,3,3,2</div>
-                <div class="number">854<i class="icon-arrow-up"></i></div>
-                <div class="title">Посетители</div>
-                <div class="footer">
-                    <a href="#"> read full report</a>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-xl d-flex">
+                    <div class="card flex-fill">
+                        <div class="card-body py-4">
+                            <div class="media">
+                                <div class="d-inline-block mt-2 mr-3">
+                                    <i class="feather-lg text-primary" data-feather="shopping-cart"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="mb-2">2.562</h3>
+                                    <div class="mb-0">Sales Today</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="span3 statbox green" onTablet="span6" onDesktop="span3">
-                <div class="boxchart">1,2,6,4,0,8,2,4,5,3,1,7,5</div>
-                <div class="number">123<i class="icon-arrow-up"></i></div>
-                <div class="title">Продажи</div>
-                <div class="footer">
-                    <a href="#"> read full report</a>
+                <div class="col-12 col-sm-6 col-xl d-flex">
+                    <div class="card flex-fill">
+                        <div class="card-body py-4">
+                            <div class="media">
+                                <div class="d-inline-block mt-2 mr-3">
+                                    <i class="feather-lg text-warning" data-feather="activity"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="mb-2">17.212</h3>
+                                    <div class="mb-0">Visitors Today</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="span3 statbox blue " onTablet="span6" onDesktop="span3">
-                <div class="boxchart">5,6,7,2,0,-4,-2,4,8,2,3,3,2</div>
-                <div class="number">982<i class="icon-arrow-up"></i></div>
-                <div class="title">orders</div>
-                <div class="footer">
-                    <a href="#"> read full report</a>
+                <div class="col-12 col-sm-6 col-xl d-flex">
+                    <div class="card flex-fill">
+                        <div class="card-body py-4">
+                            <div class="media">
+                                <div class="d-inline-block mt-2 mr-3">
+                                    <i class="feather-lg text-success" data-feather="dollar-sign"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="mb-2">$ 24.300</h3>
+                                    <div class="mb-0">Total Earnings</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="span3 statbox yellow" onTablet="span6" onDesktop="span3">
-                <div class="boxchart">7,2,2,2,1,-4,-2,4,8,,0,3,3,5</div>
-                <div class="number">678<i class="icon-arrow-down"></i></div>
-                <div class="title">visits</div>
-                <div class="footer">
-                    <a href="#"> read full report</a>
+                <div class="col-12 col-sm-6 col-xl d-flex">
+                    <div class="card flex-fill">
+                        <div class="card-body py-4">
+                            <div class="media">
+                                <div class="d-inline-block mt-2 mr-3">
+                                    <i class="feather-lg text-danger" data-feather="shopping-bag"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="mb-2">43</h3>
+                                    <div class="mb-0">Pending Orders</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-        </div>
-
-        <div class="row-fluid">
-
-            <div class="span8 widget blue" onTablet="span7" onDesktop="span8">
-
-                <div id="stats-chart2" style="height:282px"></div>
-
-            </div>
-
-            <div class="sparkLineStats span4 widget green" onTablet="span5" onDesktop="span4">
-
-                <ul class="unstyled">
-
-                    <li><span class="sparkLineStats3"></span>
-                        Pageviews:
-                        <span class="number">781</span>
-                    </li>
-                    <li><span class="sparkLineStats4"></span>
-                        Pages / Visit:
-                        <span class="number">2,19</span>
-                    </li>
-                    <li><span class="sparkLineStats5"></span>
-                        Avg. Visit Duration:
-                        <span class="number">00:02:58</span>
-                    </li>
-                    <li><span class="sparkLineStats6"></span>
-                        Bounce Rate: <span class="number">59,83%</span>
-                    </li>
-                    <li><span class="sparkLineStats7"></span>
-                        % New Visits:
-                        <span class="number">70,79%</span>
-                    </li>
-                    <li><span class="sparkLineStats8"></span>
-                        % Returning Visitor:
-                        <span class="number">29,21%</span>
-                    </li>
-
-                </ul>
-
-                <div class="clearfix"></div>
-
-            </div><!-- End .sparkStats -->
-
-        </div>
-
-
-        <div class="row-fluid">
-
-            <div class="widget blue span5" onTablet="span6" onDesktop="span5">
-
-                <h2><span class="glyphicons globe"><i></i></span> Статистика</h2>
-
-                <hr>
-
-                <div class="content">
-
-                    <div class="verticalChart">
-
-                        <div class="singleBar">
-
-                            <div class="bar">
-
-                                <div class="value">
-                                    <span>37%</span>
+                <div class="col-12 col-sm-6 col-xl d-none d-xxl-flex">
+                    <div class="card flex-fill">
+                        <div class="card-body py-4">
+                            <div class="media">
+                                <div class="d-inline-block mt-2 mr-3">
+                                    <i class="feather-lg text-info" data-feather="dollar-sign"></i>
                                 </div>
-
-                            </div>
-
-                            <div class="title">US</div>
-
-                        </div>
-
-                        <div class="singleBar">
-
-                            <div class="bar">
-
-                                <div class="value">
-                                    <span>16%</span>
+                                <div class="media-body">
+                                    <h3 class="mb-2">$ 18.700</h3>
+                                    <div class="mb-0">Total Revenue</div>
                                 </div>
-
                             </div>
-
-                            <div class="title">PL</div>
-
                         </div>
-
-                        <div class="singleBar">
-
-                            <div class="bar">
-
-                                <div class="value">
-                                    <span>12%</span>
-                                </div>
-
-                            </div>
-
-                            <div class="title">GB</div>
-
-                        </div>
-
-                        <div class="singleBar">
-
-                            <div class="bar">
-
-                                <div class="value">
-                                    <span>9%</span>
-                                </div>
-
-                            </div>
-
-                            <div class="title">DE</div>
-
-                        </div>
-
-                        <div class="singleBar">
-
-                            <div class="bar">
-
-                                <div class="value">
-                                    <span>7%</span>
-                                </div>
-
-                            </div>
-
-                            <div class="title">NL</div>
-
-                        </div>
-
-                        <div class="singleBar">
-
-                            <div class="bar">
-
-                                <div class="value">
-                                    <span>6%</span>
-                                </div>
-
-                            </div>
-
-                            <div class="title">CA</div>
-
-                        </div>
-
-                        <div class="singleBar">
-
-                            <div class="bar">
-
-                                <div class="value">
-                                    <span>5%</span>
-                                </div>
-
-                            </div>
-
-                            <div class="title">FI</div>
-
-                        </div>
-
-                        <div class="singleBar">
-
-                            <div class="bar">
-
-                                <div class="value">
-                                    <span>4%</span>
-                                </div>
-
-                            </div>
-
-                            <div class="title">RU</div>
-
-                        </div>
-
-                        <div class="singleBar">
-
-                            <div class="bar">
-
-                                <div class="value">
-                                    <span>3%</span>
-                                </div>
-
-                            </div>
-
-                            <div class="title">AU</div>
-
-                        </div>
-
-                        <div class="singleBar">
-
-                            <div class="bar">
-
-                                <div class="value">
-                                    <span>1%</span>
-                                </div>
-
-                            </div>
-
-                            <div class="title">N/A</div>
-
-                        </div>
-
-                        <div class="clearfix"></div>
-
                     </div>
-
-                </div>
-
-            </div><!--/span-->
-
-            <div class="widget span3 red" onTablet="span6" onDesktop="span3">
-
-                <h2><span class="glyphicons pie_chart"><i></i></span> Browsers</h2>
-
-                <hr>
-
-                <div class="content">
-
-                    <div class="browserStat big">
-                        <img src="img/browser-chrome-big.png" alt="Chrome">
-                        <span>34%</span>
-                    </div>
-                    <div class="browserStat big">
-                        <img src="img/browser-firefox-big.png" alt="Firefox">
-                        <span>34%</span>
-                    </div>
-                    <div class="browserStat">
-                        <img src="img/browser-ie.png" alt="Internet Explorer">
-                        <span>34%</span>
-                    </div>
-                    <div class="browserStat">
-                        <img src="img/browser-safari.png" alt="Safari">
-                        <span>34%</span>
-                    </div>
-                    <div class="browserStat">
-                        <img src="img/browser-opera.png" alt="Opera">
-                        <span>34%</span>
-                    </div>
-
-
                 </div>
             </div>
 
-            <div class="widget yellow span4 noMargin" onTablet="span12" onDesktop="span4">
-                <h2><span class="glyphicons fire"><i></i></span> Server Load</h2>
-                <hr>
-                <div class="content">
-                    <div id="serverLoad2" style="height:224px;"></div>
+
+            <div class="row">
+                <div class="col-12 col-lg-6 col-xl-4 d-flex">
+                    <div class="card flex-fill">
+                        <div class="card-header">
+                            <div class="card-actions float-right">
+                                <div class="dropdown show">
+                                    <a href="#" data-toggle="dropdown" data-display="static">
+                                        <i class="align-middle" data-feather="more-horizontal"></i>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="card-title mb-0">Calendar</h5>
+                        </div>
+                        <div class="card-body d-flex">
+                            <div class="align-self-center w-100">
+                                <div class="chart">
+                                    <div id="datetimepicker-dashboard"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="col-12 col-xl-4 d-none d-xl-flex">
+                    <div class="card flex-fill w-100">
+                        <div class="card-header">
+                            <div class="card-actions float-right">
+                                <div class="dropdown show">
+                                    <a href="#" data-toggle="dropdown" data-display="static">
+                                        <i class="align-middle" data-feather="more-horizontal"></i>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="card-title mb-0">Weekly sales</h5>
+                        </div>
+                        <div class="card-body d-flex">
+                            <div class="align-self-center w-100">
+                                <div class="py-3">
+                                    <div class="chart chart-xs">
+                                        <canvas id="chartjs-dashboard-pie"></canvas>
+                                    </div>
+                                </div>
+
+                                <table class="table mb-0">
+                                    <thead>
+                                    <tr>
+                                        <th>Source</th>
+                                        <th class="text-right">Revenue</th>
+                                        <th class="text-right">Value</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><i class="fas fa-square-full text-primary"></i> Direct</td>
+                                        <td class="text-right">$ 2602</td>
+                                        <td class="text-right text-success">+43%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-square-full text-warning"></i> Affiliate</td>
+                                        <td class="text-right">$ 1253</td>
+                                        <td class="text-right text-success">+13%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-square-full text-danger"></i> E-mail</td>
+                                        <td class="text-right">$ 541</td>
+                                        <td class="text-right text-success">+24%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-square-full text-dark"></i> Other</td>
+                                        <td class="text-right">$ 1465</td>
+                                        <td class="text-right text-success">+11%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 d-flex">
+							<div class="card flex-fill w-100">
+								<div class="card-header">
+									<span class="badge badge-info float-right">Today</span>
+									<h5 class="card-title mb-0">Daily feed</h5>
+								</div>
+								<div class="card-body">
+									<div class="media">
+										<img src="{% static 'img\avatars\avatar-5.jpg' %}" width="36" height="36" class="rounded-circle mr-2" alt="Ashley Briggs">
+										<div class="media-body">
+											<small class="float-right text-navy">5m ago</small>
+											<strong>Ashley Briggs</strong> started following <strong>Stacie Hall</strong><br>
+											<small class="text-muted">Today 7:51 pm</small><br>
+
+										</div>
+									</div>
+
+									<hr>
+									<div class="media">
+										<img src="{% static 'img\avatars\avatar.jpg' %}" width="36" height="36" class="rounded-circle mr-2" alt="Chris Wood">
+										<div class="media-body">
+											<small class="float-right text-navy">30m ago</small>
+											<strong>Chris Wood</strong> posted something on <strong>Stacie Hall</strong>'s timeline<br>
+											<small class="text-muted">Today 7:21 pm</small>
+
+											<div class="border text-sm text-muted p-2 mt-1">
+												Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing...
+											</div>
+										</div>
+									</div>
+
+									<hr>
+									<div class="media">
+										<img src="{% static 'img\avatars\avatar-4.jpg' %}" width="36" height="36" class="rounded-circle mr-2" alt="Stacie Hall">
+										<div class="media-body">
+											<small class="float-right text-navy">1h ago</small>
+											<strong>Stacie Hall</strong> posted a new blog<br>
+
+											<small class="text-muted">Today 6:35 pm</small>
+										</div>
+									</div>
+
+									<hr>
+									<a href="#" class="btn btn-primary btn-block">Load more</a>
+								</div>
+							</div>
+						</div>
             </div>
 
-        </div>
+            <div class="row">
+                <div class="col-12 col-lg-6 col-xl-8 d-flex">
+                    <div class="card flex-fill">
+                        <div class="card-header">
+                            <div class="card-actions float-right">
+                                <div class="dropdown show">
+                                    <a href="#" data-toggle="dropdown" data-display="static">
+                                        <i class="align-middle" data-feather="more-horizontal"></i>
+                                    </a>
 
-        <div class="row-fluid">
-
-            <div class="box black span4" onTablet="span6" onDesktop="span4">
-                <div class="box-header">
-                    <h2><i class="halflings-icon white list"></i><span class="break"></span>Weekly Stat</h2>
-                    <div class="box-icon">
-                        <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-                        <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="card-title mb-0">Latest Projects</h5>
+                        </div>
+                        <table id="datatables-dashboard-projects" class="table table-striped my-0">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th class="d-none d-xl-table-cell">Start Date</th>
+                                <th class="d-none d-xl-table-cell">End Date</th>
+                                <th>Status</th>
+                                <th class="d-none d-md-table-cell">Assignee</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Project Apollo</td>
+                                <td class="d-none d-xl-table-cell">01/01/2018</td>
+                                <td class="d-none d-xl-table-cell">31/06/2018</td>
+                                <td><span class="badge badge-success">Done</span></td>
+                                <td class="d-none d-md-table-cell">Carl Jenkins</td>
+                            </tr>
+                            <tr>
+                                <td>Project Fireball</td>
+                                <td class="d-none d-xl-table-cell">01/01/2018</td>
+                                <td class="d-none d-xl-table-cell">31/06/2018</td>
+                                <td><span class="badge badge-danger">Cancelled</span></td>
+                                <td class="d-none d-md-table-cell">Bertha Martin</td>
+                            </tr>
+                            <tr>
+                                <td>Project Hades</td>
+                                <td class="d-none d-xl-table-cell">01/01/2018</td>
+                                <td class="d-none d-xl-table-cell">31/06/2018</td>
+                                <td><span class="badge badge-success">Done</span></td>
+                                <td class="d-none d-md-table-cell">Stacie Hall</td>
+                            </tr>
+                            <tr>
+                                <td>Project Nitro</td>
+                                <td class="d-none d-xl-table-cell">01/01/2018</td>
+                                <td class="d-none d-xl-table-cell">31/06/2018</td>
+                                <td><span class="badge badge-warning">In progress</span></td>
+                                <td class="d-none d-md-table-cell">Carl Jenkins</td>
+                            </tr>
+                            <tr>
+                                <td>Project Phoenix</td>
+                                <td class="d-none d-xl-table-cell">01/01/2018</td>
+                                <td class="d-none d-xl-table-cell">31/06/2018</td>
+                                <td><span class="badge badge-success">Done</span></td>
+                                <td class="d-none d-md-table-cell">Bertha Martin</td>
+                            </tr>
+                            <tr>
+                                <td>Project X</td>
+                                <td class="d-none d-xl-table-cell">01/01/2018</td>
+                                <td class="d-none d-xl-table-cell">31/06/2018</td>
+                                <td><span class="badge badge-success">Done</span></td>
+                                <td class="d-none d-md-table-cell">Stacie Hall</td>
+                            </tr>
+                            <tr>
+                                <td>Project Romeo</td>
+                                <td class="d-none d-xl-table-cell">01/01/2018</td>
+                                <td class="d-none d-xl-table-cell">31/06/2018</td>
+                                <td><span class="badge badge-success">Done</span></td>
+                                <td class="d-none d-md-table-cell">Ashley Briggs</td>
+                            </tr>
+                            <tr>
+                                <td>Project Wombat</td>
+                                <td class="d-none d-xl-table-cell">01/01/2018</td>
+                                <td class="d-none d-xl-table-cell">31/06/2018</td>
+                                <td><span class="badge badge-warning">In progress</span></td>
+                                <td class="d-none d-md-table-cell">Bertha Martin</td>
+                            </tr>
+                            <tr>
+                                <td>Project Zircon</td>
+                                <td class="d-none d-xl-table-cell">01/01/2018</td>
+                                <td class="d-none d-xl-table-cell">31/06/2018</td>
+                                <td><span class="badge badge-danger">Cancelled</span></td>
+                                <td class="d-none d-md-table-cell">Stacie Hall</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div class="box-content">
-                    <ul class="dashboard-list metro">
-                        <li>
-                            <a href="#">
-                                <i class="icon-arrow-up green"></i>
-                                <strong>92</strong>
-                                New Comments
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="icon-arrow-down red"></i>
-                                <strong>15</strong>
-                                New Registrations
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="icon-minus blue"></i>
-                                <strong>36</strong>
-                                New Articles
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="icon-comment yellow"></i>
-                                <strong>45</strong>
-                                User reviews
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="icon-arrow-up green"></i>
-                                <strong>112</strong>
-                                New Comments
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="icon-arrow-down red"></i>
-                                <strong>31</strong>
-                                New Registrations
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="icon-minus blue"></i>
-                                <strong>93</strong>
-                                New Articles
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="icon-comment yellow"></i>
-                                <strong>256</strong>
-                                User reviews
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div><!--/span-->
+                <div class="col-12 col-lg-6 col-xl-4 d-flex">
+                    <div class="card flex-fill w-100">
+                        <div class="card-header">
+                            <div class="card-actions float-right">
+                                <div class="dropdown show">
+                                    <a href="#" data-toggle="dropdown" data-display="static">
+                                        <i class="align-middle" data-feather="more-horizontal"></i>
+                                    </a>
 
-            <div class="box black span4" onTablet="span6" onDesktop="span4">
-                <div class="box-header">
-                    <h2><i class="halflings-icon white user"></i><span class="break"></span>Последние пользователи</h2>
-                    <div class="box-icon">
-                        <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-                        <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-                    </div>
-                </div>
-                <div class="box-content">
-                    <ul class="dashboard-list metro">
-                        <li class="green">
-                            <a href="#">
-                                <img class="avatar" alt="Сергей Иванов" src="img/avatar.jpg">
-                            </a>
-                            <strong>Name:</strong> Сергей Иванов<br>
-                            <strong>Since:</strong> Jul 25, 2012 11:09<br>
-                            <strong>Status:</strong> Approved
-                        </li>
-                        <li class="yellow">
-                            <a href="#">
-                                <img class="avatar" alt="Сергей Иванов" src="img/avatar.jpg">
-                            </a>
-                            <strong>Name:</strong> Сергей Иванов<br>
-                            <strong>Since:</strong> Jul 25, 2012 11:09<br>
-                            <strong>Status:</strong> Pending
-                        </li>
-                        <li class="red">
-                            <a href="#">
-                                <img class="avatar" alt="Сергей Иванов" src="img/avatar.jpg">
-                            </a>
-                            <strong>Name:</strong> Сергей Иванов<br>
-                            <strong>Since:</strong> Jul 25, 2012 11:09<br>
-                            <strong>Status:</strong> Banned
-                        </li>
-                        <li class="blue">
-                            <a href="#">
-                                <img class="avatar" alt="Сергей Иванов" src="img/avatar.jpg">
-                            </a>
-                            <strong>Name:</strong> Сергей Иванов<br>
-                            <strong>Since:</strong> Jul 25, 2012 11:09<br>
-                            <strong>Status:</strong> Updated
-                        </li>
-                    </ul>
-                </div>
-            </div><!--/span-->
-
-            <div class="box black span4 noMargin" onTablet="span12" onDesktop="span4">
-                <div class="box-header">
-                    <h2><i class="halflings-icon white check"></i><span class="break"></span>Список дел</h2>
-                    <div class="box-icon">
-                        <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
-                        <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-                        <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-                    </div>
-                </div>
-                <div class="box-content">
-                    <div class="todo metro">
-                        <ul class="todo-list">
-                            <li class="red">
-                                <a class="action icon-check-empty" href="#"></a>
-                                Windows Phone 8 App
-                                <strong>today</strong>
-                            </li>
-                            <li class="red">
-                                <a class="action icon-check-empty" href="#"></a>
-                                New frontend layout
-                                <strong>today</strong>
-                            </li>
-                            <li class="yellow">
-                                <a class="action icon-check-empty" href="#"></a>
-                                Hire developers
-                                <strong>tommorow</strong>
-                            </li>
-                            <li class="yellow">
-                                <a class="action icon-check-empty" href="#"></a>
-                                Windows Phone 8 App
-                                <strong>tommorow</strong>
-                            </li>
-                            <li class="green">
-                                <a class="action icon-check-empty" href="#"></a>
-                                New frontend layout
-                                <strong>this week</strong>
-                            </li>
-                            <li class="green">
-                                <a class="action icon-check-empty" href="#"></a>
-                                Hire developers
-                                <strong>this week</strong>
-                            </li>
-                            <li class="blue">
-                                <a class="action icon-check-empty" href="#"></a>
-                                New frontend layout
-                                <strong>this month</strong>
-                            </li>
-                            <li class="blue">
-                                <a class="action icon-check-empty" href="#"></a>
-                                Hire developers
-                                <strong>this month</strong>
-                            </li>
-                        </ul>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="card-title mb-0">Sales / Revenue</h5>
+                        </div>
+                        <div class="card-body d-flex w-100">
+                            <div class="align-self-center chart chart-lg">
+                                <canvas id="chartjs-dashboard-bar"></canvas>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
         </div>
-        <div class="row-fluid hideInIE8 circleStats">
-
-            <div class="span2" onTablet="span4" onDesktop="span2">
-                <div class="circleStatsItemBox yellow">
-                    <div class="header">Использование дискового пространства</div>
-                    <span class="percent">percent</span>
-                    <div class="circleStat">
-                        <input type="text" value="58" class="whiteCircle"/>
-                    </div>
-                    <div class="footer">
-							<span class="count">
-								<span class="number">20000</span>
-								<span class="unit">MB</span>
-							</span>
-                        <span class="sep"> / </span>
-                        <span class="value">
-								<span class="number">50000</span>
-								<span class="unit">MB</span>
-							</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="span2" onTablet="span4" onDesktop="span2">
-                <div class="circleStatsItemBox green">
-                    <div class="header">Bandwidth</div>
-                    <span class="percent">percent</span>
-                    <div class="circleStat">
-                        <input type="text" value="78" class="whiteCircle"/>
-                    </div>
-                    <div class="footer">
-							<span class="count">
-								<span class="number">5000</span>
-								<span class="unit">GB</span>
-							</span>
-                        <span class="sep"> / </span>
-                        <span class="value">
-								<span class="number">5000</span>
-								<span class="unit">GB</span>
-							</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="span2" onTablet="span4" onDesktop="span2">
-                <div class="circleStatsItemBox red">
-                    <div class="header">Memory</div>
-                    <span class="percent">percent</span>
-                    <div class="circleStat">
-                        <input type="text" value="100" class="whiteCircle"/>
-                    </div>
-                    <div class="footer">
-							<span class="count">
-								<span class="number">64</span>
-								<span class="unit">GB</span>
-							</span>
-                        <span class="sep"> / </span>
-                        <span class="value">
-								<span class="number">64</span>
-								<span class="unit">GB</span>
-							</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="span2 noMargin" onTablet="span4" onDesktop="span2">
-                <div class="circleStatsItemBox pink">
-                    <div class="header">CPU</div>
-                    <span class="percent">percent</span>
-                    <div class="circleStat">
-                        <input type="text" value="83" class="whiteCircle"/>
-                    </div>
-                    <div class="footer">
-							<span class="count">
-								<span class="number">64</span>
-								<span class="unit">GHz</span>
-							</span>
-                        <span class="sep"> / </span>
-                        <span class="value">
-								<span class="number">3.2</span>
-								<span class="unit">GHz</span>
-							</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="span2" onTablet="span4" onDesktop="span2">
-                <div class="circleStatsItemBox blue">
-                    <div class="header">Память</div>
-                    <span class="percent">percent</span>
-                    <div class="circleStat">
-                        <input type="text" value="100" class="whiteCircle"/>
-                    </div>
-                    <div class="footer">
-							<span class="count">
-								<span class="number">64</span>
-								<span class="unit">GB</span>
-							</span>
-                        <span class="sep"> / </span>
-                        <span class="value">
-								<span class="number">64</span>
-								<span class="unit">GB</span>
-							</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="span2" onTablet="span4" onDesktop="span2">
-                <div class="circleStatsItemBox green">
-                    <div class="header">Память</div>
-                    <span class="percent">percent</span>
-                    <div class="circleStat">
-                        <input type="text" value="100" class="whiteCircle"/>
-                    </div>
-                    <div class="footer">
-							<span class="count">
-								<span class="number">64</span>
-								<span class="unit">GB</span>
-							</span>
-                        <span class="sep"> / </span>
-                        <span class="value">
-								<span class="number">64</span>
-								<span class="unit">GB</span>
-							</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row-fluid">
-
-            <a class="quick-button metro yellow span2">
-                <i class="icon-group"></i>
-                <p>Пользователи</p>
-                <span class="badge">237</span>
-            </a>
-            <a class="quick-button metro red span2">
-                <i class="icon-comments-alt"></i>
-                <p>Комментарии</p>
-                <span class="badge">46</span>
-            </a>
-            <a class="quick-button metro blue span2">
-                <i class="icon-shopping-cart"></i>
-                <p>Заказы</p>
-                <span class="badge">13</span>
-            </a>
-            <a class="quick-button metro green span2">
-                <i class="icon-barcode"></i>
-                <p>Продукты</p>
-            </a>
-            <a class="quick-button metro pink span2">
-                <i class="icon-envelope"></i>
-                <p>Сообщения</p>
-                <span class="badge">88</span>
-            </a>
-            <a class="quick-button metro black span2">
-                <i class="icon-calendar"></i>
-                <p>Календарь</p>
-            </a>
-
-            <div class="clearfix"></div>
-
-        </div><!--/row-->
+    </main>
 
 
-    </div><!--/.fluid-container-->
 {% endblock %}
 <!-- end: Content -->
