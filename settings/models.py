@@ -34,7 +34,7 @@ class Playgrounds(models.Model):
     overview = models.CharField("Краткое описание", max_length=255)
     description = models.TextField("Подробное описание")
 
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Автор", blank=True, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Автор", blank=True, null=True)
     types_ads_id = models.ForeignKey(TypesAds, on_delete=models.CASCADE, verbose_name="Тип рекламы", blank=True,
                                      null=True)
     # playground_id = models.ForeignKey()
@@ -58,7 +58,7 @@ class Playgrounds(models.Model):
 class Advertiser(models.Model):
     name = models.CharField("Название", max_length=150)
     description = models.TextField("Описание")
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Автор", blank=True, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Автор", blank=True, null=True)
 
     def __str__(self):
         return self.name

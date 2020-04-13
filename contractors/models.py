@@ -14,7 +14,7 @@ class Contractors(models.Model):
     overview = models.CharField("Краткое описание", max_length=255)
     description = models.TextField("Подробное описание")
 
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Автор", blank=True, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Автор", blank=True, null=True)
 
     created = models.DateTimeField('Создано', auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

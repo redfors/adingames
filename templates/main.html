@@ -40,6 +40,7 @@
 
         gtag('config', 'UA-120946860-6');
     </script>
+
 </head>
 
 <body>
@@ -48,29 +49,36 @@
         <div class="sidebar-content ">
             <a class="sidebar-brand" href="index.html">
                 <i class="align-middle" data-feather="box"></i>
-                <span class="align-middle">AppStack</span>
+                <span class="align-middle">ADINGAME</span>
             </a>
 
             <ul class="sidebar-nav">
-                <li class="sidebar-header">
-                    Main
+                <li>
+                    <div class="custom-control custom-switch" style="color: #fff; margin: 20px 0 25px -0;">
+                        <span style="margin: 0 42px 0 -19px">Рекламодатель</span>
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1">Площадка</label>
+                    </div>
+
                 </li>
-                <li class="sidebar-item active">
-                    <a href="#dashboards" data-toggle="collapse" class="sidebar-link">
-                        <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{% url 'index' %}">
+                        <i class="align-middle text-primary" data-feather="sliders"></i> <span
+                            class="align-middle">Панель управления</span>
                     </a>
-                    <ul id="dashboards" class="sidebar-dropdown list-unstyled collapse show" data-parent="#sidebar">
-                        <li class="sidebar-item active"><a class="sidebar-link"
-                                                           href="dashboard-default.html">Default</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" href="dashboard-analytics-1.html">Analytics</a>
-                        </li>
-                        <li class="sidebar-item"><a class="sidebar-link" href="dashboard-e-commerce.html">E-commerce</a>
-                        </li>
-                        <li class="sidebar-item"><a class="sidebar-link" href="dashboard-social.html">Social</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" href="dashboard-crypto.html">Crypto <span
-                                class="sidebar-badge badge badge-primary">New</span></a></li>
-                    </ul>
+
+
                 </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{% url 'newtask' %}">
+                        <i class="align-middle text-primary" data-feather="edit"></i> <span
+                            class="align-middle">Добавить задание</span>
+                    </a>
+
+
+                </li>
+
+
                 <li class="sidebar-item">
                     <a href="#pages" data-toggle="collapse" class="sidebar-link collapsed">
                         <i class="align-middle" data-feather="layout"></i> <span class="align-middle">Pages</span>
@@ -524,7 +532,7 @@
     </div>
 </div>
 
-<script src="{% static 'js\app.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
 
 <script>
     $(function () {
@@ -684,6 +692,43 @@
             bFilter: false,
             autoWidth: false
         });
+    });
+</script>
+<script>
+    $(function () {
+        // Datatables clients
+        $("#datatables-clients").DataTable({
+            responsive: true,
+            order: [
+                [1, "asc"]
+            ]
+        });
+    });
+</script>
+
+<script>
+    $(function () {
+        $('.sidebar-item a').each(function () {
+            var location = window.location.href;
+            var link = this.href;
+            if (location == link) {
+                $(this).parent().addClass('active');
+            }
+        });
+    });
+</script>
+
+<script>
+    $(function () {
+        // Select2
+        $(".select2").each(function () {
+            $(this)
+                .wrap("<div class=\"position-relative\"></div>")
+                .select2({
+                    placeholder: "Выбрать категорию",
+                    dropdownParent: $(this).parent()
+                });
+        })
     });
 </script>
 

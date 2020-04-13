@@ -14,8 +14,8 @@ class Profile(models.Model):
     type_user = models.CharField("Тип пользователя", max_length=100, choices=STATUS_CHOICES, default='adventiser')
     telephone = models.BigIntegerField("телефон", blank=True, null=True)
     company = models.CharField(max_length=100, blank=True, null=True)
-    playground_id = models.ForeignKey(Playgrounds, on_delete=models.CASCADE, verbose_name="Игровая площадка", blank=True, null=True)
-    advertiser_id = models.ForeignKey(Advertiser, on_delete=models.CASCADE, verbose_name="Рекламодатель", blank=True,
+    playground = models.ForeignKey(Playgrounds, on_delete=models.CASCADE, verbose_name="Игровая площадка", blank=True, null=True)
+    advertiser = models.ForeignKey(Advertiser, on_delete=models.CASCADE, verbose_name="Рекламодатель", blank=True,
                                       null=True)
     # Advertiser.objects.get()
 
