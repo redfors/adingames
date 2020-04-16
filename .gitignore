@@ -6,5 +6,6 @@ __pycache
 .env.prod.db
 .idea/
 migrations
-
-
+Dockerfile
+docker-compose.yml
+db.sqlite3

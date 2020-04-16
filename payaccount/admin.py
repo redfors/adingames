@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Account
+from .models import PayAccount
 
 
-@admin.register(Account)
-class AccountAdmin(admin.ModelAdmin):
+@admin.register(PayAccount)
+class PayAccountAdmin(admin.ModelAdmin):
     list_display = ('user', 'title', 'overview', 'created')
     list_filter = ('title', 'overview')
     search_fields = ('title', 'overview', 'description')

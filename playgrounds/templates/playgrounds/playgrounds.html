@@ -1,1 +1,180 @@
 {% extends 'main.html' %}
+<!-- start: Content -->
+{% load static %}
+{% block content %}
+    <div class="container-fluid" style="margin-top: 30px">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Пол аудитории</h5>
+                    </div>
+                    <div class="card-body">
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" checked="">
+                            <span class="custom-control-label">Мужчины</span>
+                        </label>
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" checked="">
+                            <span class="custom-control-label">Женщины</span>
+                        </label>
+
+                    </div>
+                </div>
+                <div>
+                    <label for="customRange2">Возраст аудитории</label>
+                    <input type="range" class="custom-range" min="0" max="5" id="customRange2">
+                    <label for="customRange2">&emsp; 10 &emsp; 20 &emsp; 30 &emsp; 40 &emsp; 50 &emsp; 60 </label>
+                </div>
+                <div class="card-body">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1">Показывать новые</label>
+
+                    </div>
+                </div>
+                <div class="card-body">
+                    <label for="inputState" style="margin-right: 25px">Подборки площадок</label>
+                    <select class="select2">
+                        <option selected="">выбрать из сохраненных...</option>
+                        <option>Моя подборка 1</option>
+
+                    </select>
+                </div>
+
+                <div class="card-body">
+                    <label for="inputState" style="margin-right: 25px">Фильтры</label>
+                    <select class="select2">
+                        <option selected="">выбрать фильтр поиска...</option>
+                        <option>Аркады</option>
+                        <option>Стратегии</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="customRange2">Количество пользователей</label>
+                    <input type="range" class="custom-range" min="0" max="5" id="customRange2">
+                    <label for="customRange2">&emsp; 10 &emsp; 20 &emsp; 30 &emsp; 40 &emsp; 50 &emsp; 60 </label>
+                </div>
+                <div>
+                    <label for="customRange2">Количество просмотров</label>
+                    <input type="range" class="custom-range" min="0" max="5" id="customRange2">
+                    <label for="customRange2">&emsp; 10 &emsp; 20 &emsp; 30 &emsp; 40 &emsp; 50 &emsp; 60 </label>
+                </div>
+                <div class="card-body">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked="">
+                        <label class="custom-control-label" for="customRadio1">Сортировать по дате</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">По популярности</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-10 col-lg-5">
+                <div class="card">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'img/photos/game-2.jpg' %}" alt="Unsplash">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Card with image and list</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                    </div>
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs pull-right" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tab-1">Active</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tab-2">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" data-toggle="tab" href="#tab-3">Disabled</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="tab-1" role="tabpanel">
+                                <h5 class="card-title">Card with tabs</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="tab-pane fade text-center" id="tab-2" role="tabpanel">
+                                <h5 class="card-title">Card with tabs</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="tab-pane fade" id="tab-3" role="tabpanel">
+                                <h5 class="card-title">Card with tabs</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-lg-5">
+                <div class="card">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'img/photos/game-1.jpg' %}" alt="Unsplash">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Card with image and list</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                    </div>
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs pull-right" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tab-1">Active</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tab-2">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" data-toggle="tab" href="#tab-3">Disabled</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="tab-1" role="tabpanel">
+                                <h5 class="card-title">Card with tabs</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="tab-pane fade text-center" id="tab-2" role="tabpanel">
+                                <h5 class="card-title">Card with tabs</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="tab-pane fade" id="tab-3" role="tabpanel">
+                                <h5 class="card-title">Card with tabs</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+<!-- end: Content -->

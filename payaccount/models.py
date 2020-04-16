@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class Account(models.Model):
+class PayAccount(models.Model):
     STATUS_MODERATOR = (
         ('on_moderation', 'На модерации'),
         ('rejected', 'Отклонено'),
@@ -26,5 +26,5 @@ class Account(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = """аккаунт"""
-        verbose_name_plural = """аккаунты"""
+        verbose_name = """Платежный аккаунт"""
+        verbose_name_plural = """Платежные аккаунты"""

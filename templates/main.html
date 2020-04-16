@@ -98,7 +98,7 @@
 
                             </li>
                             <li class="sidebar-item">
-                                <a class="sidebar-link" href="{% url 'account' %}">
+                                <a class="sidebar-link" href="{% url 'payaccount' %}">
                                     <i class="align-middle text-warning" data-feather="dollar-sign"></i> <span
                                         class="align-middle">Мои финансы</span>
                                 </a>
@@ -175,7 +175,7 @@
 
                             </li>
                             <li class="sidebar-item">
-                                <a class="sidebar-link" href="#">
+                                <a class="sidebar-link" href="{% url 'settings' %}">
                                     <i class="align-middle text-danger" data-feather="settings"></i> <span
                                         class="align-middle">Настройки</span>
                                 </a>
@@ -198,6 +198,13 @@
                                 <a class="sidebar-link" href="{% url 'index' %}">
                                     <i class="align-middle text-primary" data-feather="sliders"></i> <span
                                         class="align-middle">Панель управления</span>
+                                </a>
+
+                            </li>
+                        <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'feed' %}">
+                                    <i class="align-middle text-primary" data-feather="search"></i> <span
+                                        class="align-middle">Лента заданий</span>
                                 </a>
 
                             </li>
