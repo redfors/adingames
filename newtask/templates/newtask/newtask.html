@@ -25,9 +25,12 @@
                         <div class="form-group row">
                             <label class="col-form-label col-sm-2 text-sm-right">Подробное описание</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" placeholder="Распишите подробно задачу" rows="3" name="description"></textarea>
+                                <textarea class="form-control" placeholder="Распишите подробно задачу" rows="3"
+                                          name="description"></textarea>
                             </div>
                         </div>
+{#                        <input type="hidden" class="form-control" value="{{ user.id }}" name="user_id">#}
+
 
                         <div class="form-group row">
                             <label for="inputState" class="col-form-label col-sm-2 text-sm-right"
@@ -53,32 +56,32 @@
                             <label for="inputState" class="col-form-label col-sm-2 text-sm-right"
                                    style="margin-right: 15px">Категория рекламы</label>
 
-                                    <select class="select2" data-toggle="select2" multiple="">
-                                        <optgroup label="Недвижимость, авто">
-                                            <option value="AK">Дома</option>
-                                            <option value="HI">Автомобили</option>
-                                        </optgroup>
-                                        <optgroup label="Финансовые, юридические услуги">
-                                            <option value="CA">Банки</option>
-                                            <option value="NV">Юристы</option>
+                            <select class="select2" data-toggle="select2" multiple="">
+                                <optgroup label="Недвижимость, авто">
+                                    <option value="AK">Дома</option>
+                                    <option value="HI">Автомобили</option>
+                                </optgroup>
+                                <optgroup label="Финансовые, юридические услуги">
+                                    <option value="CA">Банки</option>
+                                    <option value="NV">Юристы</option>
 
-                                        </optgroup>
-                                        <optgroup label="Бытовая техника">
-                                            <option value="AZ">Для дома</option>
-                                            <option value="CO">Электроника</option>
+                                </optgroup>
+                                <optgroup label="Бытовая техника">
+                                    <option value="AZ">Для дома</option>
+                                    <option value="CO">Электроника</option>
 
-                                        </optgroup>
-                                        <optgroup label="Продукты питания">
-                                            <option value="AL">Для взрослых</option>
-                                            <option value="AR">Для детей</option>
+                                </optgroup>
+                                <optgroup label="Продукты питания">
+                                    <option value="AL">Для взрослых</option>
+                                    <option value="AR">Для детей</option>
 
-                                        </optgroup>
-                                        <optgroup label="Одежда">
-                                            <option value="CT">Для взрослых</option>
-                                            <option value="DE">Для детей</option>
+                                </optgroup>
+                                <optgroup label="Одежда">
+                                    <option value="CT">Для взрослых</option>
+                                    <option value="DE">Для детей</option>
 
-                                        </optgroup>
-                                    </select>
+                                </optgroup>
+                            </select>
 
                         </div>
 

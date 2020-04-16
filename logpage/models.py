@@ -17,7 +17,7 @@ class Profile(models.Model):
     playground = models.ForeignKey(Playgrounds, on_delete=models.CASCADE, verbose_name="Игровая площадка", blank=True, null=True)
     advertiser = models.ForeignKey(Advertiser, on_delete=models.CASCADE, verbose_name="Рекламодатель", blank=True,
                                       null=True)
-    # Advertiser.objects.get()
+
 
     def __str__(self):
         return self.user.username

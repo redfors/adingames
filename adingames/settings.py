@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECRET_KEY = os.environ.get("SECRET_KEY")
 SECRET_KEY = 'foo'
 # DEBUG = int(os.environ.get("DEBUG", default=0))
-DEBUG = 1
+DEBUG = True
 # ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
@@ -35,11 +35,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'advertiser.apps.AdvertiserConfig',
+    'account.apps.AccountConfig',
+
     'blog.apps.BlogConfig',
     'cards.apps.CardsConfig',
     'chat.apps.ChatConfig',
     'contractors.apps.ContractorsConfig',
+    'dashboard.apps.DashaboardConfig',
     'dealmanager.apps.DealmanagerConfig',
     'deals.apps.DealsConfig',
     'logpage.apps.LogpageConfig',
@@ -48,7 +50,7 @@ INSTALLED_APPS = [
     'myprofile',
     'mytools.apps.MytoolsConfig',
     'newcard',
-    'newplayground',
+    'newcollection',
     'newspage.apps.NewspageConfig',
     'newtask',
     'playgrounds',
@@ -81,6 +83,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # 'logpage.context_processors.typeUser'
             ],
         },
     },
@@ -127,6 +130,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+LOGIN_REDIRECT_URL = '/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/

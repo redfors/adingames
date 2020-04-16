@@ -3,5 +3,5 @@ from django.urls import re_path
 from . import views
 
 urlpatterns = [
-    re_path('', views.mymessages, name='mymessages'),
+    re_path('', views.mymessages, name='messages'),
 ]

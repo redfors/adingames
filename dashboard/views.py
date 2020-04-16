@@ -1,11 +1,10 @@
 from django.shortcuts import render
-
 from logpage.models import Profile
 
 
-def myprofile(request):
+def dashaboard(request):
     if request.user.is_active:
         typeuser = Profile.objects.filter(user=request.user)
-        return render(request, 'myprofile/profile.html', {'typeuser': typeuser})
+        return render(request, 'dashboard/index.html', {'typeuser': typeuser})
     else:
-        return render(request, 'myprofile/profile.html')
+        return render(request, 'dashboard/index.html')

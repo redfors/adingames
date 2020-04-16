@@ -3,6 +3,5 @@ from django.urls import re_path
 from . import views
 
 urlpatterns = [
-    re_path('', views.myprofile, name='profile'),
-
+    re_path('', views.newcollection, name='newcollection')
 ]
