@@ -9,3 +9,4 @@ Dockerfile
 docker-compose.yml
 db.sqlite3
 settings.py
+migrations/000*
