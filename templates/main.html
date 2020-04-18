@@ -36,15 +36,18 @@
                     {% if post.type_user == 'adventiser' %}
 
                         <ul class="sidebar-nav">
-                            <!--<li>
-                                <div class="custom-control custom-switch" style="color: #fff; margin: 20px 0 25px -0;">
-                                    <span style="margin: 0 42px 0 -19px">Рекламодатель</span>
-                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                    <label class="custom-control-label" for="customSwitch1">Площадка</label>
-                                </div>
-
-                            </li>-->
-                            <div style="margin-top: 70px"></div>
+                            <li>
+                                <form>
+                                    <div class="custom-control custom-switch"
+                                         style="color: #fff; margin: 20px 0 25px 0;">
+                                        <span style="margin: 0 42px 0 -19px">Рекламодатель</span>
+                                        <input type="checkbox" class="custom-control-input ajax" id="customSwitch1">
+                                        <label class="custom-control-label" for="customSwitch1">Площадка</label>
+                                        <input id="type-user" type="text" hidden="" value="{{ post.type_user }}">
+                                    </div>
+                                </form>
+                            </li>
+                            <div style="margin-top: 0px"></div>
                             <li class="sidebar-item">
                                 <a class="sidebar-link" href="{% url 'index' %}">
                                     <i class="align-middle text-primary" data-feather="sliders"></i> <span
@@ -108,7 +111,7 @@
                             </li>
                             </li>
                             <li class="sidebar-item">
-                                <a class="sidebar-link" href="{% url 'newcollection' %}">
+                                <a class="sidebar-link" href="{% url 'new' %}">
                                     <i class="align-middle text-danger" data-feather="plus-square"></i> <span
                                         class="align-middle">Добавить подборку</span>
                                 </a>
@@ -192,8 +195,20 @@
 
                     {% else %}
                         <ul class="sidebar-nav">
+                            <li>
+                                <form id="check-script">
+                                    <div class="custom-control custom-switch"
+                                         style="color: #fff; margin: 20px 0 25px 0;">
+                                        <span style="margin: 0 42px 0 -19px">Рекламодатель</span>
+                                        <input type="checkbox" class="custom-control-input ajax" id="customSwitch1"
+                                               checked>
+                                        <label class="custom-control-label" for="customSwitch1">Площадка</label>
+                                        <input id="type-user" type="text" hidden="" value="{{ post.type_user }}">
+                                    </div>
+                                </form>
+                            </li>
 
-                            <div style="margin-top: 70px"></div>
+                            <div style="margin-top: 0px"></div>
                             <li class="sidebar-item">
                                 <a class="sidebar-link" href="{% url 'index' %}">
                                     <i class="align-middle text-primary" data-feather="sliders"></i> <span
@@ -201,13 +216,143 @@
                                 </a>
 
                             </li>
-                        <li class="sidebar-item">
+                            <li class="sidebar-header">
+                                Главное
+                            </li>
+                            <li class="sidebar-item">
                                 <a class="sidebar-link" href="{% url 'feed' %}">
                                     <i class="align-middle text-primary" data-feather="search"></i> <span
                                         class="align-middle">Лента заданий</span>
                                 </a>
 
                             </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'newplay' %}">
+                                    <i class="align-middle text-" data-feather="search"></i> <span
+                                        class="align-middle">Добавить площадку</span>
+                                </a>
+
+
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'myplays' %}">
+                                    <i class="align-middle text-warning" data-feather="briefcase"></i> <span
+                                        class="align-middle">Мои площадки</span>
+                                </a>
+
+                            <li class="sidebar-header">
+                                Финансы
+                            </li>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'deals' %}">
+                                    <i class="align-middle text-warning" data-feather="check-square"></i> <span
+                                        class="align-middle">Мои сделки</span>
+                                </a>
+
+
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'dealmanager' %}">
+                                    <i class="align-middle text-danger" data-feather="compass"></i> <span
+                                        class="align-middle">Управление сделками</span>
+                                </a>
+
+
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'payaccount' %}">
+                                    <i class="align-middle text-warning" data-feather="dollar-sign"></i> <span
+                                        class="align-middle">Мои финансы</span>
+                                </a>
+
+                            <li class="sidebar-header">
+                                Коллекции
+                            </li>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'newcard' %}">
+                                    <i class="align-middle text-danger" data-feather="plus-square"></i> <span
+                                        class="align-middle">Добавить визитку</span>
+                                </a>
+
+
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'cards' %}">
+                                    <i class="align-middle text-warning" data-feather="layers"></i> <span
+                                        class="align-middle">Мои визитки</span>
+                                </a>
+
+                            <li class="sidebar-header">
+                                Сообщество
+                            </li>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'blog' %}">
+                                    <i class="align-middle text-primary" data-feather="book-open"></i> <span
+                                        class="align-middle">Блог</span>
+                                </a>
+
+
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'chat' %}">
+                                    <i class="align-middle text-primary" data-feather="edit-3"></i> <span
+                                        class="align-middle">Чат</span>
+                                </a>
+
+
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'messages' %}">
+                                    <i class="align-middle text-primary" data-feather="mail"></i> <span
+                                        class="align-middle">Сообщения</span>
+                                </a>
+
+
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'newspage' %}">
+                                    <i class="align-middle text-warning" data-feather="rss"></i> <span
+                                        class="align-middle">Новости</span>
+                                </a>
+
+
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'statistic' %}">
+                                    <i class="align-middle text-warning" data-feather="pie-chart"></i> <span
+                                        class="align-middle">Статистика</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-header">
+                                Управление аккаунтом
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'profile' %}">
+                                    <i class="align-middle text-primary" data-feather="user"></i> <span
+                                        class="align-middle">Мой профиль</span>
+                                </a>
+
+
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'settings' %}">
+                                    <i class="align-middle text-danger" data-feather="settings"></i> <span
+                                        class="align-middle">Настройки</span>
+                                </a>
+
+
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'tools' %}">
+                                    <i class="align-middle text-warning" data-feather="edit"></i> <span
+                                        class="align-middle">Инструменты</span>
+                                </a>
+                            </li>
+
                         </ul>
                     {% endif %}
                 {% endfor %}
@@ -575,7 +720,7 @@
             })
         });
     </script>
-
+    <script src="{% static 'js/ajax.js' %}"></script>
     </body>
 
     </html>
@@ -663,6 +808,7 @@
         </div>
     </main>
     <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/ajax.js' %}"></script>
     </body>
     </html>
 {% endif %}

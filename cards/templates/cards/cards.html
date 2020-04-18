@@ -1,2 +1,115 @@
 {% extends 'main.html' %}
-cards
+<!-- start: Content -->
+{% load static %}
+{% block content %}
+    <div class="container-fluid" style="margin-top: 30px">
+        <div class="row">
+            <div class="col-lg-2"></div>
+
+
+            <div class="col-10 col-lg-4">
+                <div class="card">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'img/photos/game-2.jpg' %}" alt="Unsplash">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Card with image and list</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                    </div>
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs pull-right" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tab-1">Active</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tab-2">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" data-toggle="tab" href="#tab-3">Disabled</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="tab-1" role="tabpanel">
+                                <h5 class="card-title">Card with tabs</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="tab-pane fade text-center" id="tab-2" role="tabpanel">
+                                <h5 class="card-title">Card with tabs</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="tab-pane fade" id="tab-3" role="tabpanel">
+                                <h5 class="card-title">Card with tabs</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-lg-4">
+                <div class="card">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'img/photos/game-1.jpg' %}" alt="Unsplash">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Card with image and list</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                    </div>
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs pull-right" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tab-1">Active</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tab-2">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" data-toggle="tab" href="#tab-3">Disabled</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="tab-1" role="tabpanel">
+                                <h5 class="card-title">Card with tabs</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="tab-pane fade text-center" id="tab-2" role="tabpanel">
+                                <h5 class="card-title">Card with tabs</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="tab-pane fade" id="tab-3" role="tabpanel">
+                                <h5 class="card-title">Card with tabs</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+
+        </div>
+    </div>
+{% endblock %}
+<!-- end: Content -->

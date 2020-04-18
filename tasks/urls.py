@@ -1,8 +1,9 @@
-from django.urls import re_path
+from django.urls import path
 
-from . import views
+from tasks import views
 
 urlpatterns = [
-    re_path('', views.mytasks, name='tasks'),
-    re_path('feed/', views.feed, name='feed')
+    path('', views.mytasks, name='tasks'),
+    path('feed/', views.feed, name='feed'),
+    path('newtask/', views.newtask, name='newtask'),
 ]

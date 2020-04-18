@@ -14,33 +14,28 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import include, re_path
+from django.urls import include, path
 
 from django.conf import settings
 
 urlpatterns = [
-    re_path(r'admin/', admin.site.urls),
-    re_path('accounts/', include('django.contrib.auth.urls')),
-    re_path(r'payaccount/', include('payaccount.urls')),
-    re_path(r'^$', include('dashboard.urls')),
-    re_path(r'settings/', include('settings.urls')),
-    re_path(r'blog/', include('blog.urls')),
-    re_path(r'cards/', include('cards.urls')),
-    re_path(r'chat/', include('chat.urls')),
-    re_path(r'contractors/', include('contractors.urls')),
-    re_path(r'index/', include('dashboard.urls')),
-    re_path(r'dealmanager/', include('dealmanager.urls')),
-    re_path(r'deals/', include('deals.urls')),
-    re_path(r'collections/', include('mycollections.urls')),
-    re_path(r'messages/', include('mymessages.urls')),
-    re_path(r'profile/', include('myprofile.urls')),
-    re_path(r'tools/', include('mytools.urls')),
-    re_path(r'newcard/', include('newcard.urls')),
-    re_path(r'newcollection/', include('newcollection.urls')),
-    re_path(r'newspage/', include('newspage.urls')),
-    re_path(r'newtask/', include('newtask.urls')),
-    re_path(r'playgrounds/', include('playgrounds.urls')),
-    re_path(r'statistic/', include('statistic.urls')),
-    re_path(r'tasks/', include('tasks.urls')),
-
+    path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('payaccount/', include('payaccount.urls')),
+    path('settings/', include('settings.urls')),
+    path('blog/', include('blog.urls')),
+    path('cards/', include('cards.urls')),
+    path('chat/', include('chat.urls')),
+    path('contractors/', include('contractors.urls')),
+    path('index/', include('dashboard.urls')),
+    path('deals/', include('deals.urls')),
+    path('collections/', include('mycollections.urls')),
+    path('messages/', include('mymessages.urls')),
+    path('profile/', include('myprofile.urls')),
+    path('tools/', include('mytools.urls')),
+    path('newspage/', include('newspage.urls')),
+    path('playgrounds/', include('playgrounds.urls')),
+    path('statistic/', include('statistic.urls')),
+    path('tasks/', include('tasks.urls')),
+    path('', include('dashboard.urls')),
 ]

@@ -1,7 +1,9 @@
-from django.urls import re_path
+from django.urls import path
 
 from . import views
 
 urlpatterns = [
-    re_path('', views.playgrounds, name='playgrounds'),
+    path('', views.playgrounds, name='playgrounds'),
+    path('newplay/', views.newplay, name='newplay'),
+    path('myplays/', views.myplays, name='myplays'),
 ]

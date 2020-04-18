@@ -10,3 +10,12 @@ def mycollections(request):
         return render(request, 'mycollections/collections.html', {'collections': collections, 'typeuser': typeuser})
     else:
         return render(request, 'mycollections/collections.html', {'collections': collections})
+
+
+def newcollection(request):
+    if request.user.is_active:
+        typeuser = Profile.objects.filter(user=request.user)
+
+        return render(request, 'mycollections/new.html', {'typeuser': typeuser})
+    else:
+        return render(request, 'mycollections/new.html')

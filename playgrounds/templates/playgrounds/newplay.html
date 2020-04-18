@@ -1,0 +1,125 @@
+{% extends 'main.html' %}
+{% block content %}
+    <div class="container-fluid" style="margin-top: 30px">
+    <div class="row">
+        <div class="col-xl-2">
+        </div>
+        <div class="col-xl-8" >
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Добавить игровую площадку</h4>
+                    <h6 class="card-subtitle text-muted">Зарегистрируйте свою площадку и дождитесь модерации</h6>
+                </div>
+                <div class="card-body">
+                    <form action="{% url 'newtask' %}" method="post">
+                        {% csrf_token %}
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-2 text-sm-right">Название</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="" name="title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-2 text-sm-right">Краткое описание</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="" name="overview">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-2 text-sm-right">Подробное описание</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" placeholder="" rows="3"
+                                          name="description"></textarea>
+                            </div>
+                        </div>
+{#                        <input type="hidden" class="form-control" value="{{ user.id }}" name="user_id">#}
+
+
+                        <div class="form-group row">
+                            <label for="inputState" class="col-form-label col-sm-2 text-sm-right"
+                                   style="margin-right: 15px">Тип игры</label>
+                            <select class="select2">
+                                <option selected="">Выберите тип игры</option>
+                                <option>One</option>
+                                <option>Two</option>
+                                <option>Three</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="inputState" class="col-form-label col-sm-2 text-sm-right"
+                                   style="margin-right: 15px">Категория рекламы</label>
+
+                            <select class="select2" data-toggle="select2" multiple="">
+                                <optgroup label="Недвижимость, авто">
+                                    <option value="AK">Дома</option>
+                                    <option value="HI">Автомобили</option>
+                                </optgroup>
+                                <optgroup label="Финансовые, юридические услуги">
+                                    <option value="CA">Банки</option>
+                                    <option value="NV">Юристы</option>
+
+                                </optgroup>
+                                <optgroup label="Бытовая техника">
+                                    <option value="AZ">Для дома</option>
+                                    <option value="CO">Электроника</option>
+
+                                </optgroup>
+                                <optgroup label="Продукты питания">
+                                    <option value="AL">Для взрослых</option>
+                                    <option value="AR">Для детей</option>
+
+                                </optgroup>
+                                <optgroup label="Одежда">
+                                    <option value="CT">Для взрослых</option>
+                                    <option value="DE">Для детей</option>
+
+                                </optgroup>
+                            </select>
+
+                        </div>
+
+
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <label class="col-form-label col-sm-2 text-sm-right pt-sm-0">Radios</label>
+                                <div class="col-sm-10">
+                                    <div class="custom-controls-stacked">
+                                        <label class="custom-control custom-radio">
+                                            <input name="custom-radio-3" type="radio"
+                                                   class="custom-control-input" checked="">
+                                            <span class="custom-control-label">Default radio</span>
+                                        </label>
+                                        <label class="custom-control custom-radio">
+                                            <input name="custom-radio-3" type="radio"
+                                                   class="custom-control-input">
+                                            <span class="custom-control-label">Second default radio</span>
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-2 text-sm-right pt-sm-0">Checkbox</label>
+                            <div class="col-sm-10">
+                                <label class="custom-control custom-checkbox m-0">
+                                    <input type="checkbox" class="custom-control-input">
+                                    <span class="custom-control-label">Check me out</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-10 ml-sm-auto">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sl-2">
+        </div>
+    </div>
+    </div>
+{% endblock %}

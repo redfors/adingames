@@ -10,3 +10,10 @@ def cards(request):
         return render(request, 'cards/cards.html', {'tasks': cards, 'typeuser': typeuser})
     else:
         return render(request, 'cards/cards.html', {'tasks': cards})
+
+def newcard(request):
+    if request.user.is_active:
+        typeuser = Profile.objects.filter(user=request.user)
+        return render(request, 'cards/newcard.html', {'typeuser': typeuser})
+    else:
+        return render(request, 'cards/newcard.html')

@@ -1,7 +1,8 @@
-from django.urls import re_path
+from django.urls import path
 
 from . import views
 
 urlpatterns = [
-    re_path('', views.deals, name='deals'),
+    path('', views.deals, name='deals'),
+    path('dealmanager/', views.dealmanager, name='dealmanager'),
 ]

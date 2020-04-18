@@ -1,7 +1,8 @@
-from django.urls import re_path
+from django.urls import path
 
 from . import views
 
 urlpatterns = [
-    re_path('', views.mycollections, name='collections'),
+    path('', views.mycollections, name='collections'),
+    path('new', views.newcollection, name='new')
 ]
