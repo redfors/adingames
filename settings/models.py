@@ -15,6 +15,29 @@ class TypesAds(models.Model):
         verbose_name = """тип рекламы"""
         verbose_name_plural = """типы рекламы"""
 
+class CategoryAds(models.Model):
+    name = models.CharField("Название", max_length=150)
+    description = models.TextField("Описание")
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = """кактегория рекламы"""
+        verbose_name_plural = """категории рекламы"""
+
+
+class FormatAds(models.Model):
+    name = models.CharField("Название", max_length=150)
+    description = models.TextField("Описание")
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = """формат рекламы"""
+        verbose_name_plural = """форматы рекламы"""
+
 
 class Playgrounds(models.Model):
     STATUS_CHOICES = (

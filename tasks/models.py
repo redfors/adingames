@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from settings.models import TypesAds
+from settings.models import TypesAds, CategoryAds, FormatAds
 
 
 # Create your models here.
@@ -29,8 +29,8 @@ class Tasks(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Автор", blank=True, null=True)
     types_ads = models.ForeignKey(TypesAds, on_delete=models.CASCADE, verbose_name="Тип рекламы", blank=True, null=True)
-    # playground_id = models.ForeignKey()
-
+    category_ads = models.ForeignKey(CategoryAds, on_delete=models.CASCADE, verbose_name="Тип рекламы", blank=True, null=True)
+    format_ads = models.ForeignKey(FormatAds, on_delete=models.CASCADE, verbose_name="Тип рекламы", blank=True, null=True)
     created = models.DateTimeField('Создано', auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     delited = models.DateTimeField(auto_now=True)

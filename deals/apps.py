@@ -3,6 +3,6 @@ from django.apps import AppConfig
 
 class DealsConfig(AppConfig):
     name = 'deals'
-    verbose_name = "Сделки"
+    verbose_name = "3. Сделки"
 
 

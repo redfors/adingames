@@ -5,6 +5,6 @@ from django.apps import AppConfig
 
 class LogpageConfig(AppConfig):
     name = 'logpage'
-    verbose_name = "Пользователи"
+    verbose_name = "2. Пользователи"
 
 

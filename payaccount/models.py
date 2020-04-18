@@ -26,5 +26,5 @@ class PayAccount(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = """Платежный аккаунт"""
-        verbose_name_plural = """Платежные аккаунты"""
+        verbose_name = """Аккаунт"""
+        verbose_name_plural = """Аккаунты"""
